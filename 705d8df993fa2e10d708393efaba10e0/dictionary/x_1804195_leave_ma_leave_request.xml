@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="806ecdfd93fa2e10d708393efaba100a" label="Leave Request" max_length="40" name="x_1804195_leave_ma_leave_request" type="collection">
+        <element label="End Date" max_length="40" name="end_date" type="glide_date_time"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Leave Type" max_length="40" name="leave_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date_time"/>
+        <element label="Approved By" max_length="4000" name="approved_by" type="glide_list"/>
+        <element label="Reason" max_length="10000" name="reason" type="string"/>
+        <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested On" max_length="40" name="requested_on" type="glide_date_time" use_dynamic_default="true"/>
+    </element>
+</database>
