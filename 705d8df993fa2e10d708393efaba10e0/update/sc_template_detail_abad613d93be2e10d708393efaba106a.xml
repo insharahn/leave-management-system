@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_template_detail">
+    <sc_template_detail action="INSERT_OR_UPDATE">
+        <applies_to_multi_row_variable_set>false</applies_to_multi_row_variable_set>
+        <item_option_new display_value="Image">cf508df273221010c84e2bb43cf6a727</item_option_new>
+        <mandatory>false</mandatory>
+        <readonly>false</readonly>
+        <restricted>false</restricted>
+        <set/>
+        <sys_class_name>sc_template_detail</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 08:11:13</sys_created_on>
+        <sys_id>abad613d93be2e10d708393efaba106a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sc_template_detail_abad613d93be2e10d708393efaba106a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 08:17:20</sys_updated_on>
+        <template display_value="Basic">637d6df993be2e10d708393efaba1062</template>
+        <value>51eda5f993be2e10d708393efaba10bd</value>
+    </sc_template_detail>
+</record_update>

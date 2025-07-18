@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Request Leave">239f297d93be2e10d708393efaba10fa</sc_cat_item>
+        <sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 10:15:22</sys_created_on>
+        <sys_id>1a1a8afd93326e10d708393efaba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.Request Leave</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sc_cat_item_category_1a1a8afd93326e10d708393efaba1071</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 10:15:22</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</application>
+        <file_path/>
+        <instance_id>af7ca1d73b942210986d048aa4e45a3a</instance_id>
+        <instance_name>dev304505</instance_name>
+        <name>sc_cat_item_category_1a1a8afd93326e10d708393efaba1071</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Request Leave">239f297d93be2e10d708393efaba10fa</sc_cat_item><sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-18 10:15:22</sys_created_on><sys_id>1a1a8afd93326e10d708393efaba1071</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Can We Help You?.Request Leave</sys_name><sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package><sys_policy/><sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope><sys_update_name>sc_cat_item_category_1a1a8afd93326e10d708393efaba1071</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-18 10:15:22</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-16629947</payload_hash>
+        <record_name>Can We Help You?.Request Leave</record_name>
+        <reverted_from/>
+        <source>7651dd31933e2e10d708393efaba1060</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 10:15:22</sys_created_on>
+        <sys_id>961a8afd93326e10d708393efaba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1981d0809830000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 10:15:22</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>9a1a8afd8a326e1004526b4f1493a874</update_guid>
+        <update_guid_history>9a1a8afd8a326e1004526b4f1493a874:-16629947</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Can We Help You?.Request Leave">57edc23593726e10d708393efaba10ca</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 10:32:06</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>718cad2c1c374ed5bf5c8d7428e1ac69</sys_id>
+        <sys_metadata>1a1a8afd93326e10d708393efaba1071</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.Request Leave</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_scope_delete display_value="">31504c924f8a475c84321d14363eeb04</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_1a1a8afd93326e10d708393efaba1071</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_1a1a8afd93326e10d708393efaba1071">961a8afd93326e10d708393efaba1075</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 10:32:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

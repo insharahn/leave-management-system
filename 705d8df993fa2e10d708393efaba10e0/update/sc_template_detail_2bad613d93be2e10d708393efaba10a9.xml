@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_template_detail">
+    <sc_template_detail action="INSERT_OR_UPDATE">
+        <applies_to_multi_row_variable_set>true</applies_to_multi_row_variable_set>
+        <item_option_new/>
+        <mandatory>false</mandatory>
+        <readonly>false</readonly>
+        <restricted>false</restricted>
+        <set display_value="Categories M2M">7a86c1f673221010c84e2bb43cf6a7d8</set>
+        <sys_class_name>sc_template_detail</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 08:11:13</sys_created_on>
+        <sys_id>2bad613d93be2e10d708393efaba10a9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sc_template_detail_2bad613d93be2e10d708393efaba10a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 08:13:55</sys_updated_on>
+        <template display_value="Basic">637d6df993be2e10d708393efaba1062</template>
+        <value>[{"sc_category_record":"e15706fc0a0a0aa7007fc21e1ab70c2f"}]</value>
+    </sc_template_detail>
+</record_update>
