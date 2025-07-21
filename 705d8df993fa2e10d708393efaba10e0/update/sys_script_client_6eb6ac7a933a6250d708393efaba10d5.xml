@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Validate all fields in one go.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Form</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+  var leaveType = g_form.getValue('u_leave_type');
+  var startDateStr = g_form.getValue('u_start_date');
+  var endDateStr = g_form.getValue('u_end_date');
+  
+  if (!startDateStr || !endDateStr) {
+    alert('Start and End dates are required.');
+    return false;
+  }
+
+  var startDate = new Date(startDateStr);
+  var endDate = new Date(endDateStr);
+  var today = new Date();
+  today.setHours(0,0,0,0);
+
+  if (leaveType == 'Permanent Leave') {
+    var minDate = new Date();
+    minDate.setDate(today.getDate() + 30);
+    if (startDate < minDate) {
+      alert('Permanent Leave must start at least 30 days from today.');
+      return false;
+    }
+  } else if (startDate < today) {
+    alert('Start date must be today or later.');
+    return false;
+  }
+
+  if (endDate <= startDate) {
+    alert('End date must be after start date.');
+    return false;
+  }
+
+  return true; // allow submission
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-21 05:36:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6eb6ac7a933a6250d708393efaba10d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_script_client_6eb6ac7a933a6250d708393efaba10d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-21 05:36:52</sys_updated_on>
+        <table>x_1804195_leave_ma_leave_request</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
