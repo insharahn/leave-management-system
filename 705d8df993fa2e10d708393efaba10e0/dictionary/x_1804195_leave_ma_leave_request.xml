@@ -10,7 +10,7 @@
                 <element inactive_on_update="false" label="Rejected" value="rejected"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="sl" label="Leave Type" mandatory="true" max_length="40" name="leave_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Sick Leave" value="sl"/>
@@ -19,8 +19,16 @@
         </element>
         <element label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
         <element label="Approved By" max_length="4000" name="approved_by" type="glide_list"/>
+        <element choice="3" default="requested" label="Approval" max_length="40" name="approval" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" value="rejected"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
+                <element inactive_on_update="false" label="Approved" value="approved"/>
+            </choice>
+        </element>
         <element label="Reason" max_length="10000" name="reason" type="string"/>
-        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Requested By" max_length="32" name="requested_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Approval History" max_length="4000" name="approval_history" type="journal"/>
         <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested On" max_length="40" name="requested_on" type="glide_date_time" use_dynamic_default="true"/>
         <index name="index">
             <element name="requested_by"/>

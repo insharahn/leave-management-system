@@ -3,81 +3,95 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>f28d9cfa93f66250d708393efaba107c</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>2ee189be93ba6250d708393efaba10b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <text>Sick leave can be applied for at any time. Permanent leave must be applied for at least a month in advance.</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>f28d9cfa93f66250d708393efaba107c</element>
+            <element>requested_by</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>768d9cfa93f66250d708393efaba10da</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>36e189be93ba6250d708393efaba10c5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>2ee189be93ba6250d708393efaba10b3</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>3ee189be93ba6250d708393efaba10c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>leave_type</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>7e8d9cfa93f66250d708393efaba10da</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>36e189be93ba6250d708393efaba10c6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>start_date</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>768d9cfa93f66250d708393efaba10db</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>3ee189be93ba6250d708393efaba10c6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>end_date</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>7e8d9cfa93f66250d708393efaba10db</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>36e189be93ba6250d708393efaba10c7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>reason</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-21 04:55:01</sys_created_on>
-            <sys_id>768d9cfa93f66250d708393efaba10dc</sys_id>
+            <sys_created_on>2025-07-21 07:33:56</sys_created_on>
+            <sys_id>3ee189be93ba6250d708393efaba10c7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">008ad03693f66250d708393efaba1082</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-21 04:55:01</sys_updated_on>
+            <sys_updated_on>2025-07-21 07:33:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
