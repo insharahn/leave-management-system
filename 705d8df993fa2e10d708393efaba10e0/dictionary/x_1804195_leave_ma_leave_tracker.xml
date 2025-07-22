@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="35b1f2c383bee250c57dac80ceaad3ea" label="Leave Tracker" max_length="40" name="x_1804195_leave_ma_leave_tracker" type="collection">
-        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element label="Requested By" max_length="32" name="requested_by" read_only="true" reference="sys_user" type="reference"/>
         <element default="30" label="Sick Leaves" max_length="40" name="sick_leaves" type="integer"/>
         <element default="60" label="Planned Leaves" max_length="40" name="planned_leaves" type="integer"/>
         <index name="index">
