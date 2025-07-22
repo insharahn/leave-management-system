@@ -23,7 +23,7 @@
     var leaveType = g_form.getValue('leave_type');
     var startDateStr = g_form.getValue('start_date');
 
-    if (leaveType == 'Permanent Leave' && startDateStr) {
+    if (leaveType == 'pl' && startDateStr) {
 		var today = new Date();
 		var startDate = new Date(startDateStr);
 
@@ -32,7 +32,7 @@
 		minDate.setDate(today.getDate() + 30);
 
 		if (startDate < minDate) {
-			alert('For Permanent Leave, start date must be at least 30 days from today.');
+			alert('For Planned Leave, start date must be at least 30 days from today.');
 			//clear values
 			g_form.setValue('start_date', '');
 			g_form.setValue('end_date', '');
@@ -48,7 +48,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5850147a93b66250d708393efaba106b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Validate Permanent Leave</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -56,7 +56,7 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>catalog_script_client_5850147a93b66250d708393efaba106b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-21 04:04:10</sys_updated_on>
+        <sys_updated_on>2025-07-22 09:48:15</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>0</ui_type>
