@@ -14,7 +14,7 @@
         <element attributes="edge_encryption_enabled=true" choice="3" default="sl" label="Leave Type" mandatory="true" max_length="40" name="leave_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Sick Leave" value="sl"/>
-                <element inactive_on_update="false" label="Permanent Leave" value="pl"/>
+                <element inactive_on_update="false" label="Planned Leave" value="pl"/>
             </choice>
         </element>
         <element label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
