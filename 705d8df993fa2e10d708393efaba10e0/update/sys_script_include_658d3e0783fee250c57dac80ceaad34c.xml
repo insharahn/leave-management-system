@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_1804195_leave_ma.LeaveTrackerAjaxone</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LeaveTrackerAjaxone</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LeaveTrackerAjaxone = Class.create();
+LeaveTrackerAjaxone.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getRemainingLeaves: function() {
+
+        var userId = gs.getUserID();
+        gs.info('LeaveTrackerAjaxone: getRemainingLeaves called for user: ' + userId);
+
+        var tracker = new GlideRecord('x_1804195_leave_ma_leave_tracker');
+        tracker.addQuery('requested_by', gs.getUserID()); //match fields
+        tracker.query(); //populate fields
+
+        var result = { sick: '30', planned: '60'}; //the default vals
+
+        if (tracker.next()) //record already exists
+		{
+            result.sick = tracker.sick_leaves + '';
+            result.planned = tracker.planned_leaves + '';
+			gs.info('LeaveTrackerAjaxone: Tracker found! sick=' + result.sick + ', planned=' + result.planned);
+        }   
+		else
+		{
+			gs.info('LeaveTrackerAjaxone: No tracker found, defaulting');
+		} 
+		gs.info('LeaveTrackerAjaxone: Returning JSON: ' + JSON.stringify(result));     
+		return JSON.stringify(result);
+
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 11:13:25</sys_created_on>
+        <sys_id>658d3e0783fee250c57dac80ceaad34c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>true</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_script_include_658d3e0783fee250c57dac80ceaad34c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 06:36:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to table="x_1804195_leave_ma_leave_request">status=approved^ORstatus=pending^EQ<item display_value="Approved" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Pending" endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="pending"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </applies_to>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for records in x_1804195_leave_ma_leave_request if the record matches the criteria (status=approved^ORstatus=pending^EQ), for users with role user, and if the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1804195_leave_ma_leave_request</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[true;]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 08:05:54</sys_created_on>
+        <sys_id>58ab93db83766650c57dac80ceaad345</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_1804195_leave_ma_leave_request</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_security_acl_58ab93db83766650c57dac80ceaad345</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 08:32:39</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</application>
+        <file_path/>
+        <instance_id>ce6d911093a86e94611eddd548373cd9</instance_id>
+        <instance_name>dev307873</instance_name>
+        <name>sys_security_acl_58ab93db83766650c57dac80ceaad345</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to table="x_1804195_leave_ma_leave_request"&gt;status=approved^ORstatus=pending^EQ&lt;item display_value="Approved" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="approved"/&gt;&lt;item display_value="Pending" endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="pending"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/applies_to&gt;&lt;condition/&gt;&lt;controlled_by_refs/&gt;&lt;decision_type&gt;allow&lt;/decision_type&gt;&lt;description&gt;Allow write for records in x_1804195_leave_ma_leave_request if the record matches the criteria (status=approved^ORstatus=pending^EQ), for users with role user, and if the ACL script returns true.&lt;/description&gt;&lt;local_or_existing&gt;Local&lt;/local_or_existing&gt;&lt;name&gt;x_1804195_leave_ma_leave_request&lt;/name&gt;&lt;operation display_value="write"&gt;write&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[true;]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-23 08:05:54&lt;/sys_created_on&gt;&lt;sys_id&gt;58ab93db83766650c57dac80ceaad345&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_1804195_leave_ma_leave_request&lt;/sys_name&gt;&lt;sys_package display_value="Leave Management System" source="x_1804195_leave_ma"&gt;705d8df993fa2e10d708393efaba10e0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave Management System"&gt;705d8df993fa2e10d708393efaba10e0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_58ab93db83766650c57dac80ceaad345&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-23 08:32:39&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1530632076</payload_hash>
+        <record_name>x_1804195_leave_ma_leave_request</record_name>
+        <reverted_from/>
+        <source>d5a22a8b833ee250c57dac80ceaad383</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 08:32:40</sys_created_on>
+        <sys_id>52826b1783b66650c57dac80ceaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1983669cd460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 08:32:40</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>c6826b1703b666502148ea065708a194</update_guid>
+        <update_guid_history>c6826b1703b666502148ea065708a194:1530632076,c381a7d3b0b66650195b7b099d14fefc:1519984421,71de9bdf18766650eb7642b8d2e9d779:21454072,526c93db3b7666504c8e3706333f4bf6:-1364097774</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 08:33:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>043c8c0ad7e84ced8070dbdb3d5a3749</sys_id>
+        <sys_metadata>58ab93db83766650c57dac80ceaad345</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1804195_leave_ma_leave_request</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_parent display_value="x_1804195_leave_ma_leave_request">b982220f833ee250c57dac80ceaad3a6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_scope_delete display_value="">31504c924f8a475c84321d14363eeb04</sys_scope_delete>
+        <sys_update_name>sys_security_acl_58ab93db83766650c57dac80ceaad345</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_58ab93db83766650c57dac80ceaad345">52826b1783b66650c57dac80ceaad395</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 08:33:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

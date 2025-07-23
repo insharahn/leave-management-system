@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Request Leave">239f297d93be2e10d708393efaba10fa</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 10:15:22</sys_created_on>
+        <sys_id>521a8afd93326e10d708393efaba106c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Request Leave</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_521a8afd93326e10d708393efaba106c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 10:15:22</sys_updated_on>
+    </sc_cat_item_catalog>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</application>
+        <file_path/>
+        <instance_id>ce6d911093a86e94611eddd548373cd9</instance_id>
+        <instance_name>dev307873</instance_name>
+        <name>sc_cat_item_catalog_521a8afd93326e10d708393efaba106c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Request Leave">239f297d93be2e10d708393efaba10fa</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 10:15:22</sys_created_on>
+        <sys_id>521a8afd93326e10d708393efaba106c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Request Leave</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_521a8afd93326e10d708393efaba106c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 10:15:22</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>]]></payload>
+        <payload_hash>-952508277</payload_hash>
+        <record_name>Service Catalog.Request Leave</record_name>
+        <reverted_from/>
+        <source>5582220f833ee250c57dac80ceaad31d</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 09:14:40</sys_created_on>
+        <sys_id>0492a20f833ee250c57dac80ceaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1983169e74b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 09:14:40</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>c092a20ffd3ee250e53e85744d75cbec</update_guid>
+        <update_guid_history>c092a20ffd3ee250e53e85744d75cbec:-952508277</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.Request Leave">035c3e8383fee250c57dac80ceaad39f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 11:07:23</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>b512d4c088ef4a3f84abfd79e1ac7ae9</sys_id>
+        <sys_metadata>521a8afd93326e10d708393efaba106c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Request Leave</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_parent display_value="">239f297d93be2e10d708393efaba10fa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_scope_delete display_value="">31504c924f8a475c84321d14363eeb04</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_521a8afd93326e10d708393efaba106c</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_521a8afd93326e10d708393efaba106c">0492a20f833ee250c57dac80ceaad3ec</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 11:07:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

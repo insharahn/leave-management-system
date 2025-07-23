@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_1804195_leave_ma.LeaveTrackerAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LeaveTrackerAjax</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LeaveTrackerAjax = Class.create();
+LeaveTrackerAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getRemainingLeaveTrackerAjaxaves: function() {
+        var tracker = new GlideRecord('x_1804195_leave_ma_leave_tracker');
+        tracker.addQuery('requested_by', gs.getUserID());
+        tracker.query();
+
+		gs.info('LeaveTrackerAjax: MEOW getRemainingLeaves called');
+
+        var result = { sick: '30', planned: '60' };
+        if (tracker.next()) {
+            result.sick = tracker.sick_leaves + '';
+            result.planned = tracker.planned_leaves + '';
+        }
+        return JSON.stringify(result);
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 06:09:56</sys_created_on>
+        <sys_id>6751c3d783f26650c57dac80ceaad30c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>true</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_script_include_6751c3d783f26650c57dac80ceaad30c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 06:36:31</sys_updated_on>
+    </sys_script_include>
+</record_update>
