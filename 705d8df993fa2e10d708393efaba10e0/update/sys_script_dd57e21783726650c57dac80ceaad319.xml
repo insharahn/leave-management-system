@@ -30,14 +30,20 @@
         <script><![CDATA[(function executeRule(current, previous /* null when async */) 
 {
     var tracker = new GlideRecord('x_1804195_leave_ma_leave_tracker');
-    tracker.addQuery('user', current.requested_by); //get the users record
+    tracker.addQuery('requested_by', current.requested_by); //get the users record
     tracker.query();
 
+    gs.info('Display BR starting. requested_by: ' + current.requested_by, 'LeaveTrackerDebug');
+
+
     if (tracker.next()) { //record exists, set values
+        gs.info('Tracker found! Sick: ' + tracker.sick_leaves + ', Planned: ' + tracker.planned_leaves, 'LeaveTrackerDebug');
         current.remaining_sick_leaves = tracker.sick_leaves;
         current.remaining_planned_leaves = tracker.planned_leaves;
         current.leave_tracker = tracker.sys_id;
     } else { //record doesnt exist, default values
+        gs.info('No tracker found. Setting default values 30 & 60.', 'LeaveTrackerDebug');
+
         current.remaining_sick_leaves = '30';
         current.remaining_planned_leaves = '60';
     }
@@ -49,7 +55,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dd57e21783726650c57dac80ceaad319</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Populate Leave Fields</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -57,9 +63,9 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>sys_script_dd57e21783726650c57dac80ceaad319</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-23 04:15:11</sys_updated_on>
+        <sys_updated_on>2025-07-23 05:19:26</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>before_display</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=dd57e21783726650c57dac80ceaad319"/>
 </record_update>

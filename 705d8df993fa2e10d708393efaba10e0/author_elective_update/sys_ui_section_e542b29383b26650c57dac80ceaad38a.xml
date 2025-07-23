@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="New Section" section_id="e542b29383b26650c57dac80ceaad38a" sys_domain="global" table="x_1804195_leave_ma_leave_request" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-23 05:02:14</sys_created_on>
+            <sys_id>7b52369383b26650c57dac80ceaad3bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-23 05:02:14</sys_updated_on>
+            <text>Sick leave can be applied for at any time. Planned leave must be applied for at least a month in advance.</text>
+            <type display_value="Line Separator">a93fc8e00f530000b12e6903cfe012e6</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>7b52369383b26650c57dac80ceaad3bc</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-23 05:02:14</sys_created_on>
+            <sys_id>3b52369383b26650c57dac80ceaad3be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">e542b29383b26650c57dac80ceaad38a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-23 05:02:14</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>New Section</caption>
+            <header>false</header>
+            <name>x_1804195_leave_ma_leave_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-23 05:01:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e542b29383b26650c57dac80ceaad38a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1804195_leave_ma_leave_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+            <sys_update_name>sys_ui_section_e542b29383b26650c57dac80ceaad38a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-23 05:01:48</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</application>
+        <file_path/>
+        <instance_id>ce6d911093a86e94611eddd548373cd9</instance_id>
+        <instance_name>dev307873</instance_name>
+        <name>sys_ui_section_e542b29383b26650c57dac80ceaad38a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="New Section" section_id="e542b29383b26650c57dac80ceaad38a" sys_domain="global" table="x_1804195_leave_ma_leave_request" version="3" view=""><sys_ui_annotation action="INSERT_OR_UPDATE"><is_plain_text>false</is_plain_text><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-23 05:02:14</sys_created_on><sys_id>7b52369383b26650c57dac80ceaad3bc</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-23 05:02:14</sys_updated_on><text>Sick leave can be applied for at any time. Planned leave must be applied for at least a month in advance.</text><type display_value="Line Separator">a93fc8e00f530000b12e6903cfe012e6</type></sys_ui_annotation><sys_ui_element action="INSERT_OR_UPDATE"><element>7b52369383b26650c57dac80ceaad3bc</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-23 05:02:14</sys_created_on><sys_id>3b52369383b26650c57dac80ceaad3be</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New Section" display_value="New Section" name="x_1804195_leave_ma_leave_request" sys_domain="global" view="Default view">e542b29383b26650c57dac80ceaad38a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-23 05:02:14</sys_updated_on><sys_user/><type>annotation</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>New Section</caption><header>false</header><name>x_1804195_leave_ma_leave_request</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-23 05:01:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>e542b29383b26650c57dac80ceaad38a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1804195_leave_ma_leave_request</sys_name><sys_overrides/><sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package><sys_policy/><sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope><sys_update_name>sys_ui_section_e542b29383b26650c57dac80ceaad38a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-23 05:01:48</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>156283499</payload_hash>
+        <record_name>Leave Request</record_name>
+        <reverted_from/>
+        <source>d5a22a8b833ee250c57dac80ceaad383</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 05:02:14</sys_created_on>
+        <sys_id>7b52369383b26650c57dac80ceaad3c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19835a926bd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 05:02:14</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>3352369363b26650418ac260e08d43c0</update_guid>
+        <update_guid_history>3352369363b26650418ac260e08d43c0:156283499,8642b29352b2665075f0f720aa2250d8:2054448409</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 05:02:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>0d72d57a12e84e3c89c1887f36389890</sys_id>
+        <sys_metadata>e542b29383b26650c57dac80ceaad38a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Section</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_parent display_value="Leave Request">806ecdfd93fa2e10d708393efaba100a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_scope_delete display_value="">31504c924f8a475c84321d14363eeb04</sys_scope_delete>
+        <sys_update_name>sys_ui_section_e542b29383b26650c57dac80ceaad38a</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_e542b29383b26650c57dac80ceaad38a">7b52369383b26650c57dac80ceaad3c0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 05:02:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
