@@ -28,10 +28,10 @@
                 <element inactive_on_update="false" label="Requested" value="requested"/>
             </choice>
         </element>
-        <element label="Remaining Sick Leaves" max_length="100" name="remaining_sick_leaves" type="string"/>
+        <element label="Remaining Sick Leaves" max_length="100" name="remaining_sick_leaves" read_only="true" type="string"/>
         <element dependent="remaining_sick_leaves" dependent_on_field="remaining_sick_leaves" label="Leave Tracker" max_length="32" name="leave_tracker" read_only="true" reference="x_1804195_leave_ma_leave_tracker" type="reference" use_dependent_field="true"/>
         <element label="Approval History" max_length="4000" name="approval_history" type="journal"/>
-        <element label="Remaining Planned Leaves" max_length="100" name="remaining_planned_leaves" type="string"/>
+        <element label="Remaining Planned Leaves" max_length="100" name="remaining_planned_leaves" read_only="true" type="string"/>
         <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested On" max_length="40" name="requested_on" type="glide_date_time" use_dynamic_default="true"/>
         <index name="index">
             <element name="leave_tracker"/>
