@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>start_date</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-27 17:55:24</sys_created_on>
+        <sys_id>bca9ceb483032210c57dac80ceaad30d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>start_date</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_ui_policy_action_bca9ceb483032210c57dac80ceaad30d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-27 17:55:24</sys_updated_on>
+        <table>x_1804195_leave_ma_leave_request</table>
+        <ui_policy display_value="Make fields read-only after submission">b22942f483032210c57dac80ceaad37a</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=bca9ceb483032210c57dac80ceaad30d"/>
+</record_update>

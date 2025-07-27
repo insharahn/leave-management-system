@@ -28,31 +28,32 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /* null when async */) {
-    //only run when the leave is approved
-    if (current.approval == 'approved' || current.status == 'approved') 
+    //only run when the leave is approved 
+    if (current.approval == 'approved' && current.status == 'approved') 
 	{
         //calculate the number of days requested
 		var start = new GlideDateTime(current.start_date);
 		var end = new GlideDateTime(current.end_date);
 		var duration = new GlideDuration(end.getNumericValue() - start.getNumericValue());
-		var days = Math.floor(duration.getNumericValue() / (1000 * 60 * 60 * 24)) + 1;
+		var days = Math.floor(duration.getNumericValue() / (1000 * 60 * 60 * 24));
 		gs.info('Leave request days calculated: ' + days);
 
         var tracker = new GlideRecord('x_1804195_leave_ma_leave_tracker');
-        tracker.addQuery('user', current.requested_by);
-        tracker.query();
+        tracker.addQuery('requested_by', current.requested_by);
+        tracker.query(); 
 
         if (tracker.next()) //record already exists within tracker so subtract
 		{
+			gs.info('record found, updating');
             if (current.leave_type == 'sl') 
 			{
                 tracker.sick_leaves = tracker.sick_leaves - days;
-				gs.log('new sick leave: ', tracker.sick_leaves);
+				gs.info('new sick leave: ', tracker.sick_leaves);
             } 
 			else if (current.leave_type == 'pl') 
 			{
                 tracker.planned_leaves = tracker.planned_leaves - days;
-				gs.log('new planned leaves: ', tracker.planned_leaves);
+				gs.info('new planned leaves: ', tracker.planned_leaves);
 
             }
             tracker.update();
@@ -60,15 +61,20 @@
 		else { //create record for user
             //default quotas minus days
             tracker.initialize();
-            tracker.user = current.requested_by;
+            tracker.requested_by = current.requested_by; 
+			gs.info('no record found, creating and updating');
             if (current.leave_type == 'sl') 
 			{
                 tracker.sick_leaves = 30 - days;
-                tracker.planned_leaves = 60;
+                tracker.planned_leaves = 60; 				
+                gs.info('new sick leave: ', tracker.sick_leaves);
+
             } else if (current.leave_type == 'pl')
 			{
                 tracker.sick_leaves = 30;
-                tracker.planned_leaves = 60 - days;
+                tracker.planned_leaves = 60 - days; 
+               gs.info('new planned leaves: ', tracker.planned_leaves);
+
             }
             tracker.insert();
         }
@@ -81,7 +87,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>72b2368783bee250c57dac80ceaad301</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Update Leave Tracker Upon Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -89,9 +95,9 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>sys_script_72b2368783bee250c57dac80ceaad301</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-22 10:45:55</sys_updated_on>
+        <sys_updated_on>2025-07-27 18:30:41</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=72b2368783bee250c57dac80ceaad301"/>
 </record_update>

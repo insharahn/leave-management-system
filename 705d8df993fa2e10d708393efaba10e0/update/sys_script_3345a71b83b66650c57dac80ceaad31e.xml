@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -28,6 +28,40 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous) {
+    var userID = gs.getUserID();
+
+    // Allow cancel from UI Action
+    if (current.cancelling == true) {
+        return;
+    }
+
+    // Allow Flow updates: status or approval changes from system user
+    var systemUsers = ['admin', 'flow_user', 'System Administrator', 'fred.luddy']; // adjust if needed
+
+    if (gs.hasRole('admin') || systemUsers.indexOf(gs.getUserName()) >= 0) {
+        return;
+    }
+
+    // Allow status move from 'draft' to allowed statuses
+    var allowedStatusChanges = ['pending', 'approved', 'rejected'];
+    if (previous.status == 'draft' && allowedStatusChanges.indexOf(current.status) >= 0) {
+        return;
+    }
+
+     if (current.operation() == 'update' && gs.getUserID() == current.requested_by) {
+        // only allow update if cancelling
+        if (!current.cancelling) {
+            gs.addErrorMessage('Updates are not allowed after submission. You can only cancel.');
+            current.setAbortAction(true);
+        }
+    }
+    // always clear flag after
+    current.cancelling = false;
+})(current, previous);
+
+
+/*
+(function executeRule(current, previous) {
     if (current.operation() == 'update' && gs.getUserID() == current.requested_by) {
         // only allow update if cancelling
         if (!current.cancelling) {
@@ -38,6 +72,7 @@
     // always clear flag after
     current.cancelling = false;
 })(current, previous);
+*/
 ]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -45,7 +80,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3345a71b83b66650c57dac80ceaad31e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Stop Updates Unless Cancel</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -53,7 +88,7 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>sys_script_3345a71b83b66650c57dac80ceaad31e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-23 10:38:46</sys_updated_on>
+        <sys_updated_on>2025-07-26 11:38:06</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
