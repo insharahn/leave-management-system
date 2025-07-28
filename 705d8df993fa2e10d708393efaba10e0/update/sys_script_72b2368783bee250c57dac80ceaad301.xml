@@ -27,7 +27,57 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /* null when async */) {
+        <script><![CDATA[
+(function executeRule(current, previous /* null when async */) {
+    // calculate leave days
+    var start = new GlideDateTime(current.start_date);
+    var end = new GlideDateTime(current.end_date);
+    var duration = new GlideDuration(end.getNumericValue() - start.getNumericValue());
+    var days = Math.floor(duration.getNumericValue() / (1000 * 60 * 60 * 24));
+
+    var tracker = new GlideRecord('x_1804195_leave_ma_leave_tracker');
+    tracker.addQuery('requested_by', current.requested_by);
+    tracker.query();
+
+    if (tracker.next()) {
+        // if becoming approved (wasn't before)
+        if (current.approval == 'approved' && previous.approval != 'approved') {
+            if (current.leave_type == 'sl') {
+                tracker.sick_leaves -= days;
+            } else if (current.leave_type == 'pl') {
+                tracker.planned_leaves -= days;
+            }
+            tracker.update();
+        }
+
+        // if being cancelled after being approved
+        else if (current.status == 'cancelled' && previous.status != 'cancelled' && previous.approval == 'approved') {
+            if (current.leave_type == 'sl') {
+                tracker.sick_leaves += days;
+            } else if (current.leave_type == 'pl') {
+                tracker.planned_leaves += days;
+            }
+            tracker.update();
+        }
+    }
+    else {
+        // record not found, only create if approved
+        if (current.approval == 'approved' && previous.approval != 'approved') {
+            tracker.initialize();
+            tracker.requested_by = current.requested_by;
+            if (current.leave_type == 'sl') {
+                tracker.sick_leaves = 30 - days;
+                tracker.planned_leaves = 60;
+            } else if (current.leave_type == 'pl') {
+                tracker.sick_leaves = 30;
+                tracker.planned_leaves = 60 - days;
+            }
+            tracker.insert();
+        }
+    }
+})(current, previous);
+
+/*(function executeRule(current, previous /* null when async */ /*){
     //only run when the leave is approved 
     if (current.approval == 'approved' && current.status == 'approved') 
 	{
@@ -79,7 +129,7 @@
             tracker.insert();
         }
     }
-})(current, previous);
+})(current, previous);*/
 ]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -87,7 +137,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>72b2368783bee250c57dac80ceaad301</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Update Leave Tracker Upon Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -95,7 +145,7 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>sys_script_72b2368783bee250c57dac80ceaad301</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-27 18:30:41</sys_updated_on>
+        <sys_updated_on>2025-07-28 04:33:17</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
