@@ -22,6 +22,7 @@
 	//check and ensure that permanent leave start date is a month after today at least
     var leaveType = g_form.getValue('leave_type');
     var startDateStr = g_form.getValue('start_date');
+	var endDateStr = g_form.getValue('end_date');
 
     if (leaveType == 'pl' && startDateStr) {
 		var today = new Date();
@@ -31,7 +32,8 @@
 		var minDate = new Date();
 		minDate.setDate(today.getDate() + 30);
 
-		if (startDate < minDate) {
+		if (startDate < minDate) 
+		{
 			alert('For Permanent Leave, start date must be at least 30 days from today.');
 			//clear values
 			g_form.setValue('start_date', '');
@@ -39,7 +41,43 @@
 			return false; //prevent submission
 		}
     }
-    return true;
+	//check and ensure that the user has enough leave left to use 
+	/*
+    var start = new Date(startDateStr);
+    var end = new Date(endDateStr);
+    var diffTime = end - start; 
+    var days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; //1000 milliseconds, 60 seconds per minute, 60 min per hour, 24 hours a day + 1 to include start date
+
+    var ga = new GlideAjax('CheckLeaveBalance'); //use the script include (server side)
+    ga.addParam('sysparm_name', 'getBalance');
+    ga.addParam('sysparm_leave_type', leaveType);
+    ga.addParam('sysparm_days', days);
+
+	/* request to execute the method and parameters associated with this GlideAjax object. The server processes the request asynchronously and returns the results via the function specified as the callback function. This example, which uses a callback function, is asynchronous meaning that the user's screen is not frozen while the script waits for a response to come back from the server. Asynchronous GlideAjax is recommended over synchronous.*/
+
+	ga.getXMLAnswer(function(answer) 
+	{
+        var balance = parseInt(answer, 10);
+        if (balance == -1) 
+		{
+            alert('Could not find your leave balance. Please contact admin.');
+            return false;
+        }
+        if (balance < days) 
+		{
+            alert('Not enough ' + (leaveType == 'sl' ? 'sick' : 'planned') + ' leaves left. You have ' + balance + ', but requested ' + days + '.');
+            return false;
+        } 
+		else 
+		{
+            // balance ok → submit
+            g_form.submit(); 
+        }
+    });
+
+
+    return false; //wait for ajax script callback*/
+	return true;
 }
 ]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -48,7 +86,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2c25e4b6933a6250d708393efaba10d7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Submission Validity</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
@@ -56,7 +94,7 @@
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
         <sys_update_name>catalog_script_client_2c25e4b6933a6250d708393efaba10d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-21 05:29:27</sys_updated_on>
+        <sys_updated_on>2025-07-22 07:35:35</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>0</ui_type>

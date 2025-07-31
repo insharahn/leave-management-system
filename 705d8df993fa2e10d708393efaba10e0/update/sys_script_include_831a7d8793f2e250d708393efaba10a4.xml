@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1804195_leave_ma.CheckLeaveBalance</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>CheckLeaveBalance</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[//this is basically a getter
+//to let me access the server side data i cant within a catalogue
+//because these functions only run on the server, not the browser
+
+/*The GlideAjax class is used by client-side scripts to send data to and receive data from the ServiceNow server. The client-side script passes parameters to the Script Include. The Script Include returns data as XML or a JSON object. The client-side script parses data from the response and can use the data in subsequent script logic.
+*/
+
+var CheckLeaveBalance = Class.create();
+CheckLeaveBalance.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+	getBalance: function() 
+	{
+		//get needed data
+        var userID = gs.getUserID();
+        var leaveType = this.getParameter('sysparm_leave_type');
+        var days = parseInt(this.getParameter('sysparm_days'), 10);
+
+        var gr = new GlideRecord('x_1804195_leave_ma_track_leaves');
+        gr.addQuery('user', userID);
+        gr.query();
+        if (gr.next()) 
+		{
+            if (leaveType == 'sl') 
+			{
+                return gr.sick_leaves;
+            } 
+			else if (leaveType == 'pl') 
+			{
+                return gr.planned_leaves;
+            }
+        }
+        return -1; //means no record
+    }
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 06:36:46</sys_created_on>
+        <sys_id>831a7d8793f2e250d708393efaba10a4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>CheckLeaveBalance</sys_name>
+        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
+        <sys_update_name>sys_script_include_831a7d8793f2e250d708393efaba10a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 07:22:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

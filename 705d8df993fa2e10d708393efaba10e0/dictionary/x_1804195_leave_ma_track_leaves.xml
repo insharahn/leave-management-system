@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0000790b93b2e250d708393efaba106c" label="Track Leaves" max_length="40" name="x_1804195_leave_ma_track_leaves" type="collection">
+        <element default="30" label="Planned Leaves" max_length="40" name="planned_leaves" type="integer"/>
+        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element default="30" label="Sick Leaves" max_length="40" name="sick_leaves" type="integer"/>
+        <element label="Last Updated" max_length="40" name="last_updated" type="glide_date"/>
+        <index name="index">
+            <element name="requested_by"/>
+        </index>
+    </element>
+</database>

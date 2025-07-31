@@ -26,12 +26,28 @@
                 <element inactive_on_update="false" label="Approved" value="approved"/>
             </choice>
         </element>
+        <element attributes="encode_utf8=false" label="Remaining Sick Leaves" max_length="32" name="sick_left" read_only="true" reference="x_1804195_leave_ma_track_leaves" type="reference"/>
         <element label="Reason" max_length="10000" name="reason" type="string"/>
+        <element attributes="encode_utf8=false" label="Remaining Planned Leaves" max_length="32" name="planned_left" read_only="true" reference="x_1804195_leave_ma_track_leaves" type="reference"/>
         <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Requested By" max_length="32" name="requested_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element attributes="encode_utf8=false" label="Remaining Sick Leaves" max_length="32" name="u_reference_2" read_only="true" reference="x_1804195_leave_ma_track_leaves" type="reference"/>
+        <element attributes="encode_utf8=false" label="Remaining Planned Leaves" max_length="32" name="u_reference_3" read_only="true" reference="x_1804195_leave_ma_track_leaves" type="reference"/>
         <element label="Approval History" max_length="4000" name="approval_history" type="journal"/>
         <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Requested On" max_length="40" name="requested_on" type="glide_date_time" use_dynamic_default="true"/>
         <index name="index">
+            <element name="planned_left"/>
+        </index>
+        <index name="index2">
             <element name="requested_by"/>
+        </index>
+        <index name="index3">
+            <element name="sick_left"/>
+        </index>
+        <index name="index4">
+            <element name="u_reference_2"/>
+        </index>
+        <index name="index5">
+            <element name="u_reference_3"/>
         </index>
     </element>
 </database>
