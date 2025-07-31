@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item/>
+        <cat_item display_value="Submit Request for Leave">4f9e1c3e93f66250d708393efaba108c</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -22,13 +22,13 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>reason</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
         <hidden>false</hidden>
         <include_none>false</include_none>
-        <instructions><![CDATA[<p>Please enter the date your leave will start.</p>]]></instructions>
+        <instructions/>
         <layout>normal</layout>
         <list_table/>
         <lookup_label/>
@@ -38,25 +38,25 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
-        <map_to_field>false</map_to_field>
+        <mandatory>false</mandatory>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>start_date</name>
+        <name>reason</name>
         <not_available_conversation>false</not_available_conversation>
-        <order>200</order>
+        <order>400</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Start Date</question_text>
+        <question_text>Why are you applying for leave?</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table/>
+        <record_producer_table>x_1804195_leave_ma_leave_request</record_producer_table>
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
@@ -77,20 +77,20 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-18 06:45:29</sys_created_on>
-        <sys_id>3ed91dfd933e2e10d708393efaba1018</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Start Date</sys_name>
-        <sys_package display_value="Leave Management System" source="x_1804195_leave_ma">705d8df993fa2e10d708393efaba10e0</sys_package>
+        <sys_created_on>2025-07-21 05:12:44</sys_created_on>
+        <sys_id>0d61ac72933a6250d708393efaba102a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Why are you applying for leave?</sys_name>
+        <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Leave Management System">705d8df993fa2e10d708393efaba10e0</sys_scope>
-        <sys_update_name>item_option_new_3ed91dfd933e2e10d708393efaba1018</sys_update_name>
+        <sys_update_name>item_option_new_0d61ac72933a6250d708393efaba102a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-18 07:42:19</sys_updated_on>
+        <sys_updated_on>2025-07-21 05:23:41</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>10</type>
+        <type>2</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -106,22 +106,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=3ed91dfd933e2e10d708393efaba1018"/>
-    <fx_price action="delete_multiple" query="id=3ed91dfd933e2e10d708393efaba1018"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=0d61ac72933a6250d708393efaba102a"/>
+    <fx_price action="delete_multiple" query="id=0d61ac72933a6250d708393efaba102a"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>3ed91dfd933e2e10d708393efaba1018</id>
+        <id>0d61ac72933a6250d708393efaba102a</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-18 06:45:29</sys_created_on>
-        <sys_id>7f0a99fd933e2e10d708393efaba10af</sys_id>
+        <sys_created_on>2025-07-21 05:12:44</sys_created_on>
+        <sys_id>da91a0b2933a6250d708393efaba1094</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-18 06:45:29</sys_updated_on>
+        <sys_updated_on>2025-07-21 05:12:44</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -129,16 +129,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>3ed91dfd933e2e10d708393efaba1018</id>
+        <id>0d61ac72933a6250d708393efaba102a</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-18 06:45:29</sys_created_on>
-        <sys_id>370a99fd933e2e10d708393efaba10af</sys_id>
+        <sys_created_on>2025-07-21 05:12:44</sys_created_on>
+        <sys_id>9291a0b2933a6250d708393efaba1094</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-18 06:45:29</sys_updated_on>
+        <sys_updated_on>2025-07-21 05:12:44</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
